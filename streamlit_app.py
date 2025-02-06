@@ -44,27 +44,4 @@ if st.button("Prédire la fleur...", help="Cliquez pour envoyer les données", t
     # Afficher la réponse de l'API
     st.write("<p style='font-size: 20px; font-weight: bold;'>Votre fleur semble être : <span style='color: #f1fb4b;'>", response , "</span></p>", unsafe_allow_html=True)
 
-import tkinter as tk
 
-def submit():
-    user_input = entry.get()
-    label_result.config(text=f"Vous avez saisi : {user_input}")
-
-# Création de la fenêtre principale
-root = tk.Tk()
-root.title("Zone de Saisie")
-
-# Création d'un champ de saisie
-entry = tk.Entry(root, width=30)
-entry.pack(pady=10)
-
-# Bouton de soumission
-button = tk.Button(root, text="Soumettre", command=submit)
-button.pack()
-
-# Label pour afficher le résultat
-label_result = tk.Label(root, text="")
-label_result.pack(pady=10)
-
-# Lancement de l'application
-root.mainloop()
