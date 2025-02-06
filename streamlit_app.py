@@ -43,11 +43,4 @@ if st.button("Prédire la fleur...", help="Cliquez pour envoyer les données", t
     
     # Afficher la réponse de l'API
     st.write("<p style='font-size: 20px; font-weight: bold;'>Votre fleur semble être : <span style='color: #ff4b4b;'>", response , "</span></p>", unsafe_allow_html=True)
-import streamlit as st
 
-st.write("hello world")
-st.title('Mon titre')
-st.button('VALIDER') 
-st.button('ANNULER')
-
-st.image('Enfant.jpg')
