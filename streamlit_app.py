@@ -7,7 +7,7 @@ def send_data_to_api(data):
     return response.json()
 
 
-st.markdown("<h1 style='text-align: center;'>PREDICTION DU TYPE DE FLEUR D'IRIS</h1>")
+st.markdown("<h1 style='text-align: center;'>PREDICTION DU TYPE DE FLEUR D'IRIS</h1>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
