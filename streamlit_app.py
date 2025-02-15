@@ -12,7 +12,7 @@ st.markdown("<h1 style='text-align: center;'>TYPE DE FLEUR </h1>", unsafe_allow_
 col1, col2 = st.columns(2)
 
 with col1:
-    sepal = st.text_area("Longueur du sépal", 0.0, 10.0, value=0.0, step=0.1)
+    
     sepal_length = st.slider("Longueur du sépal", 0.0, 10.0, value=0.0, step=0.1)
 
 with col2:
