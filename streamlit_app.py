@@ -7,30 +7,27 @@ def send_data_to_api(data):
     return response.json()
 
 
-st.markdown("<h1 style='text-align: center;'>PREDICTION DU TYPE DE FLEUR D'IRIS</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>TYPE DE FLEUR </h1>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
 with col1:
-    sepal_length = st.slider("Longueur du sépal", 0.0, 10.0, value=0.0, step=0.1)
+    sepal_length = st.text_area("Longueur du sépal", 0.0, 10.0, value=0.0, step=0.5)
+    sepal_length = st.slider("Longueur du sépal", 0.0, 10.0, value=0.0, step=0.5)
 
 with col2:
-    sepal_width = st.slider("Largeur du sépal", 0.0, 10.0, value=0.0, step=0.1)
+    sepal_width = st.slider("Largeur du sépal", 0.0, 10.0, value=0.0, step=0.5)
 
-# Deuxième ligne avec deux autres curseurs
 col3, col4 = st.columns(2)
 
 with col3:
-    petal_length = st.slider("Longueur du pétale", 0.0, 10.0, value=0.0, step=0.1)
+    petal_length = st.slider("Longueur du pétale", 0.0, 10.0, value=0.0, step=0.5)
 
 with col4:
-    petal_width = st.slider("Largeur du pétale", 0.0, 10.0, value=0.0, step=0.1)
-
-
-
+    petal_width = st.slider("Largeur du pétale", 0.0, 10.0, value=0.0, step=0.5)
 
 # Bouton pour envoyer les données à l'API
-if st.button("Prédire la fleur...", help="Cliquez pour envoyer les données", type="primary"):
+if st.button("VOIR TYPE FLEUR...", help="Cliquez pour envoyer les données", type="primary"):
     data = {
         "sepal_length": sepal_length,
         "sepal_width": sepal_width,
@@ -38,7 +35,7 @@ if st.button("Prédire la fleur...", help="Cliquez pour envoyer les données", t
         "petal_width": petal_width
     }
     
-    # Envoyer les données à l'API
+    # Envoie des données à l'API
     response = send_data_to_api(data)
     
     # Afficher la réponse de l'API
