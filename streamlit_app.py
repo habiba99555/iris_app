@@ -7,7 +7,7 @@ def send_data_to_api(data):
     return response.json()
 
 
-st.markdown("<h1 style='text-align: center;'>TYPE DE FLEUR </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>TYPE DE FLEUR </h1> <span style='color: #F23FF1;'> TYPE DE FLEUR  "</span></p>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
@@ -39,6 +39,6 @@ if st.button("VOIR TYPE FLEUR...", help="Cliquez pour envoyer les données", typ
     response = send_data_to_api(data)
     
     # Afficher la réponse de l'API
-    st.write("<p style='font-size: 20px; font-weight: bold;'>Votre fleur semble être : <span style='color: #f1fb4b;'>", response , "</span></p>", unsafe_allow_html=True)
+    st.write("<p style='font-size: 30px; font-weight: bold;'>Votre fleur est : <span style='color: #000000;'>", response , "</span></p>", unsafe_allow_html=True)
 
 
